@@ -2,7 +2,7 @@
 Try to automate everything for research
 
 # Concat images and Draw using ImageMagick
-Used to concat images and draw a text on an image, an advantage of using ImageMagick is to avoid aliasing (clear image compared to Matplotlib): link
+Used to concat images and draw a text on an image, an advantage of using ImageMagick is to avoid aliasing (clear image compared to Matplotlib): [link](https://github.com/ngthanhtin/Automate_Research/blob/main/concat.sh)
 
 # Quick ImageChecking
 Used to check the error of an image and save it to a corresponding folder: ...
