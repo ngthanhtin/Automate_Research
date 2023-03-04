@@ -5,7 +5,7 @@ Try to automate everything for research
 Used to concat images and draw a text on an image, an advantage of using ImageMagick is to avoid aliasing (clear image compared to Matplotlib): [link](https://github.com/ngthanhtin/Automate_Research/blob/main/concat.sh)
 
 # Quick ImageChecking
-Used to check the error of an image and save it to a corresponding folder: ...
+Used to check the error of an image and save it to a corresponding folder: https://github.com/ngthanhtin/Quick_ImageChecking
 
 # Dotfiles
 Used to config the tmux, bashshell, etc: https://github.com/ngthanhtin/dotfiles
