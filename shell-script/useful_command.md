@@ -6,8 +6,10 @@ o find several files (in the example, PNG images) with specific name format and 
 
 ```find . -type f -name "*.png" -not -name "*heatmaps.png" -print | while read f; do
   mogrify -format jpg $f
-done```
+done
+```
 
 Delete folders inside the path which name includes name_desired:
 
-```rm -rf `find . -maxdepth <num> -type d -name "<name_desired>"````
+```rm -rf `find . -maxdepth <num> -type d -name "<name_desired>"`
+```
