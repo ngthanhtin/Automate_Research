@@ -15,3 +15,8 @@ Delete folders inside the path which name includes name_desired:
 ```
 rm -rf `find . -maxdepth <num> -type d -name "<name_desired>"`
 ```
+
+Find 10 random files:
+```
+ls *.pdf | gshuf | head -10
+```
