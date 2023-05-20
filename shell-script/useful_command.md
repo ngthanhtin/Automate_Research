@@ -1,8 +1,9 @@
+## Linux Commands
 Change name of all files in a directory using format:
 
 ```ls | cat -n | while read n f; do mv "$f" $(printf "%06d.png" "$n"); done```
 
-o find several files (in the example, PNG images) with specific name format and do whatever you want to do with them (in the example, convert them to JPG images), use the following example which uses command line tool find:
+To find several files (in the example, PNG images) with specific name format and do whatever you want to do with them (in the example, convert them to JPG images), use the following example which uses command line tool find:
 
 ```
 find . -type f -name "*.png" -not -name "*heatmaps.png" -print | while read f; do
@@ -20,3 +21,30 @@ Find 10 random files:
 ```
 ls *.pdf | gshuf | head -10
 ```
+
+Count the number of files in a folder:
+```
+ls <folder_path> | wc -l
+```
+
+To see which processes are running:
+```
+ps aux | grep python
+```
+### Remote Commands
+Download small file from google drive:
+```
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O FILENAME
+```
+
+Download COCO:
+```
+https://gist.github.com/mkocabas/a6177fc00315403d31572e17700d7fd9
+```
+
+## Python Commands
+Install pycocotools:
+```
+conda install -c conda-forge pycocotools
+```
+
