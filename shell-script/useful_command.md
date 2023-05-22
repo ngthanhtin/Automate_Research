@@ -31,6 +31,7 @@ To see which processes are running:
 ```
 ps aux | grep python
 ```
+
 ### Remote Commands
 Download small file from google drive:
 ```
@@ -47,4 +48,8 @@ Install pycocotools:
 ```
 conda install -c conda-forge pycocotools
 ```
-
+Encountering a GPU leak in a Python program:
+```
+import signal, os
+os.kill(<PID>, signal.SIGKILL)
+```
