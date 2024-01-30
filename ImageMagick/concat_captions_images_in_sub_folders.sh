@@ -26,7 +26,9 @@ split_description() {
 
 
 # Path to the JSON file
-JSON_FILE="/Users/tinnguyen/Downloads/archive/snake_135_descriptions_ID.json"
+ID_2_DESC_JSON_FILE="/Users/tinnguyen/Downloads/archive/snake_135_descriptions_ID.json"
+
+ID_2_NAME_JSON_FILE="/Users/tinnguyen/Downloads/archive/snake_135_ID_2_classname.json"
 
 # Path to the parent folder containing subfolders
 PARENT_FOLDER="/Users/tinnguyen/Downloads/archive/train"
@@ -41,7 +43,9 @@ for FOLDER in "$PARENT_FOLDER"/*; do
         JSON_KEY="${FOLDER_NAME// /_}"
 
         # Get the description for the folder from the JSON file
-        DESCRIPTION=$(jq -r ".[\"$JSON_KEY\"]" "$JSON_FILE")
+        DESCRIPTION=$(jq -r ".[\"$JSON_KEY\"]" "$ID_2_DESC_JSON_FILE")
+
+        CLASSNAME=$(jq -r ".[\"$JSON_KEY\"]" "$ID_2_NAME_JSON_FILE")
 
         # Navigate to the subfolder
         cd "$FOLDER"
@@ -56,7 +60,7 @@ for FOLDER in "$PARENT_FOLDER"/*; do
 
         total_height=$(($line_count * $LINE_HEIGHT + 30))
         
-        magick temp_output.jpg -gravity South -background White -splice 0x$total_height -pointsize 20 -annotate +0+0 caption:"$DESCRIPTION" "/Users/tinnguyen/Downloads/archive/snake_135/$FOLDER_NAME.jpg"
+        magick temp_output.jpg -gravity South -background White -splice 0x$total_height -pointsize 20 -annotate +0+0 "$CLASSNAME":"$DESCRIPTION" "/Users/tinnguyen/Downloads/archive/snake_135/$FOLDER_NAME.jpg"
 
         # Remove the temporary concatenated image
         rm temp_output.jpg
