@@ -30,6 +30,11 @@ Count the number of files in a folder:
 ls <folder_path> | wc -l
 ```
 
+Count all files within a directory and its subdirectories:
+```
+find . -type f | wc -l
+```
+
 To see which processes are running:
 ```
 ps aux | grep python
