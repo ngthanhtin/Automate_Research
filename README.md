@@ -18,5 +18,8 @@ Used to view a batch of images of a class of ImageNet (or others): https://githu
 
 ![Screenshot 2024-07-08 at 8 59 44 AM](https://github.com/ngthanhtin/Automate_Research/assets/17596799/3326565a-88a6-4ff6-86ac-0e840913a1a2)
 
+# Reset touch bar display
+sudo pkill TouchBarServer
+
 # Author
 Thanh Tin Nguyen
